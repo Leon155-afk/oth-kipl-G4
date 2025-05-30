@@ -52,10 +52,9 @@ else:
     y = df_subset["Verkaufsmenge"]
     model = sm.OLS(y, X).fit()
 
-# %%
 # Prognose für nächste 6 Monate
-    forecast_rows = []
-    for i in range(1, 7):
+forecast_rows = []
+for i in range(1, 7):
         monat_num = len(df_subset) + i - 1
         y_pred = model.predict([1, monat_num])[0]
         forecast_rows.append({
@@ -66,15 +65,15 @@ else:
             "Verkaufsmenge": y_pred
         })
 
-    df_forecast = pd.DataFrame(forecast_rows)
+df_forecast = pd.DataFrame(forecast_rows)
 
 # %%
     # Kombinierte Daten für Plot
-    df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
+df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
 
 # %%
    # Plot erstellen
-    plot = (
+plot = (
         ggplot(df_combined, aes(x="Monat_num", y="Verkaufsmenge")) +
         geom_line(color="blue") +
         geom_point(color="red") +
@@ -83,7 +82,7 @@ else:
         theme_minimal()
     )
 
-    print(plot)
+print(plot)
     # bis hier Prognose für Bluse in Region Nord
 
 
@@ -172,7 +171,7 @@ else:
     df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
 
 # %%
-    plot = (
+plot = (
         ggplot(df_combined, aes(x="Monat_num", y="Verkaufsmenge")) +
         geom_line(color="blue") +
         geom_point(color="red") +
@@ -180,7 +179,7 @@ else:
         ggtitle(f"Prognose Verkaufszahlen Marke '{marke}'") +
         theme_minimal()
     )
-    print(plot)
+print(plot)
 
 # bis hier Prognose Verkaufszahlen Marke Adidas
 
@@ -222,7 +221,7 @@ else:
     df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
 
 # %%
-    plot = (
+plot = (
         ggplot(df_combined, aes(x="Monat_num", y="Verkaufsmenge")) +
         geom_line(color="blue") +
         geom_point(color="red") +
@@ -230,7 +229,7 @@ else:
         ggtitle(f"Prognose Verkaufszahlen Marke '{marke}'") +
         theme_minimal()
     )
-    print(plot)
+print(plot)
 
 # bis hier Prognose Verkaufszahlen Marke Puma
 
@@ -274,7 +273,7 @@ else:
     df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
 
 # %%
-    plot = (
+plot = (
         ggplot(df_combined, aes(x="Monat_num", y="Verkaufsmenge")) +
         geom_line(color="blue") +
         geom_point(color="red") +
@@ -282,7 +281,7 @@ else:
         ggtitle(f"Prognose Verkaufszahlen für Männer") +
         theme_minimal()
     )
-    print(plot)
+print(plot)
 
 # bis hier Prognose Verkaufszahlen für Männer
 
@@ -324,7 +323,7 @@ else:
     df_combined = pd.concat([df_subset, df_forecast], ignore_index=True)
 
 # %%
-    plot = (
+plot = (
         ggplot(df_combined, aes(x="Monat_num", y="Verkaufsmenge")) +
         geom_line(color="blue") +
         geom_point(color="red") +
@@ -332,7 +331,7 @@ else:
         ggtitle(f"Prognose Verkaufszahlen für Frauen") +
         theme_minimal()
     )
-    print(plot)
+print(plot)
 # bis hier Prognose Verkaufszahlen für Frauen
 
 
