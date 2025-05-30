@@ -333,7 +333,6 @@ else:
         theme_minimal()
     )
     print(plot)
-test
 # bis hier Prognose Verkaufszahlen für Frauen
 
 
