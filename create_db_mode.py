@@ -3,10 +3,10 @@ import sqlite3 #package für SQL databank
 import pandas as pd #panda für tabellennutzung# %%
 # %%
 # Load CSV files into pandas DataFrames i.e. einzelne Dateien in eine Datenbank schreiben
-csv_Kunden = pd.read_csv("mode_sales/Kunden.csv", sep=";", encoding="utf-8") # pd.read befehl kommt aus panda packes
-csv_Standort = pd.read_csv("mode_sales/standorte.csv", sep=";", encoding="utf-8")
-csv_Verkaufszahlen = pd.read_csv("mode_sales/Verkaufszahlen.csv", sep=";", encoding="utf-8")
-csv_Produkte = pd.read_csv("mode_sales/Produkte.csv", sep=";", encoding="utf-8")
+csv_Kunden = pd.read_csv("Kunden.csv", sep=";", encoding="utf-8") # pd.read befehl kommt aus panda packes
+csv_Standort = pd.read_csv("Standorte.csv", sep=";", encoding="utf-8")
+csv_Verkaufszahlen = pd.read_csv("Verkaufszahlen.csv", sep=";", encoding="utf-8")
+csv_Produkte = pd.read_csv("Produkte.csv", sep=";", encoding="utf-8")
 # %%
 #  SQL Database verbindung wird hergestellt, wenn Name "store_verkaeufe" nicht existiert, wird es kreiert)
 con = sqlite3.connect('store_verkaeufe.db') 
