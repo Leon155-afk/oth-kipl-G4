@@ -1,4 +1,3 @@
-# %%
 #%%
 
 import pandas as pd
@@ -81,9 +80,7 @@ top_produkte = (
 
 )
 
- 
-
-# %% Die 10 am wenigsten verkauften Produkte (gesamt) (Neu von Jasmin hinzugefügt)
+# %% Die 10 am wenigsten verkauften Produkte (gesamt) 
 
 bottom_produkte = (
 
@@ -98,7 +95,6 @@ bottom_produkte = (
     .head(10)
 
 )
-
  
 
 #%% . Verteilung der Verkäufe nach Geschlecht des Produkts
@@ -146,19 +142,6 @@ print(bottom_produkte)
 print(monatliche_sales)
 
 print(sales_Geschlecht)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # %%. Deskriptive Analyse- Visualisierungen (von Jasmin Ziereis)
