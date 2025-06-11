@@ -87,7 +87,7 @@ print(bottom_produkte)
 print(monatliche_sales)
 print(sales_Geschlecht)
 
-# %%. Deskriptive Analyse- Visualisierungen (von Jasmin Ziereis)
+# %%. Deskriptive Analyse- Visualisierungen 
 
 ######1.Erstellen eines Balkendiagramm (Anteil Geschlecht an Verkauf)
 
