@@ -172,7 +172,7 @@ plot_monate.draw()
 
 #%%
 
-## 4.Top 10 Produkte
+## 4.Balkendiagramm Top 10 Produkte
 
 plot_top = (
     p9.ggplot(top_produkte, p9.aes(x="reorder(ProduktID, Gesamtverkäufe)", y="Gesamtverkäufe", fill="Marke")) +
@@ -195,7 +195,7 @@ plot_top.draw()
 
 #%%
 
-## 5. Die 10 am wenigsten verkauften Produkte
+## 5. Balkendiagramm: Die 10 am wenigsten verkauften Produkte
 
 plot_bottom = (
     p9.ggplot(bottom_produkte, p9.aes(x="reorder(ProduktID, Gesamtverkäufe)", y="Gesamtverkäufe", fill="Marke")) +
@@ -218,7 +218,7 @@ plot_bottom.draw()
 
 #%%
 
-## 6. Durchschnittlicher Verkauf
+## 6. Balkendiagramm: Durchschnittlicher Verkauf
 
 
 mw_Produktgruppe["Durchschnitt2"] = round(pd.to_numeric(mw_Produktgruppe["Durchschnitt"]),2)
