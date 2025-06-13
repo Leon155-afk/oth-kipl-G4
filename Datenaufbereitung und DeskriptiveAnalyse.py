@@ -134,7 +134,7 @@ for gruppe in produktgruppen:
         )
     )
 
-dateiname=f"diagramm_{gruppe.replace('','_')}.pdf"
+dateiname=f"diagramm_{gruppe}.pdf"
 plot.save(dateiname)
 plot.draw()
 
